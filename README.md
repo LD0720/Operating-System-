@@ -31,13 +31,13 @@ Program 2: Given a filename and data, the program writes the data to the file. A
 Program 3: Given a filename, the program prints the contents of the file on the screen.
 ### Program Syntax
 For the programs, the following syntax is used:
-• print: to print the output on the screen. Example: print x
-• assign: to initialize a new variable and assign a value to it. Example: assign x y, where x is the variable and y is the value assigned. The value could be an integer number, or a string. If y is input, it first prints to the screen "Please enter a value", then the value is taken as an input from the user.
-• writeFile: to write data to a file. Example: writeFile x y, where x is the filename and y is the data.
-• readFile: to read data from a file. Example: readFile x, where x is the filename
-• printFromTo: to print all numbers between 2 numbers. Example: printFromTo x y, where x is the first number, and y is the second number.
-• semWait: to acquire a resource. Example: semWait x, where x is the resource name. For more details refer to section Mutual Exclusion
-• semSignal: to release a resource. Example: semSignal x, where x is the resource name. For more details refer to section Mutual Exclusion
+- print: to print the output on the screen. Example: print x
+- assign: to initialize a new variable and assign a value to it. Example: assign x y, where x is the variable and y is the value assigned. The value could be an integer number, or a string. If y is input, it first prints to the screen "Please enter a value", then the value is taken as an input from the user.
+- writeFile: to write data to a file. Example: writeFile x y, where x is the filename and y is the data.
+- readFile: to read data from a file. Example: readFile x, where x is the filename
+- printFromTo: to print all numbers between 2 numbers. Example: printFromTo x y, where x is the first number, and y is the second number.
+- semWait: to acquire a resource. Example: semWait x, where x is the resource name. For more details refer to section Mutual Exclusion
+- semSignal: to release a resource. Example: semSignal x, where x is the resource name. For more details refer to section Mutual Exclusion
 ### Mutual Exclusion
 A mutex is a directive provided by the OS used to control access to a shared resource between processes in a concurrent system such as a multi-programming operating system by using two atomic operations, semwait and semsignal. Mutexes are used to ensure mutual exclusion over the critical section. You are required to implement 3 mutexes, one for each resource we have:
 1. Accessing a file, to read or to write.
@@ -51,16 +51,16 @@ Note: ONLY ONE process is allowed to use the resource at a time. If a process re
 A scheduler is responsible for scheduling between the processes in the Ready Queue. It ensures that all processes get a chance to execute. A scheduling Algorithm is an algorithm that chooses the process that gets to execute.
 In this project, you are required to implement the Round Robin algorithm. Round robin is a scheduling algorithm where each process is assigned a fixed time slice. For this project, each process executes 2 instructions in its time slice. Processes arrive in this order: Process 1 arrives at time 0, Process 2 arrives at time 1, and Process 3 arrives at time 4.
 ### Queues
-• Ready Queue: For the processes currently waiting to be chosen to execute on the processor
-• Blocked Queue: For the processes currently waiting for resources to be available
+- Ready Queue: For the processes currently waiting to be chosen to execute on the processor
+- Blocked Queue: For the processes currently waiting for resources to be available
 ### Output
 For this Milestone, your Simulated OS should be able to read the provided programs and execute them. You should make sure to have the following outputs read to show for the evaluation:
-• Queues should be printed after every scheduling event, i.e. when a process is chosen, blocked, or finished.
-• Which process is currently executing.
-• The instruction that is currently executing
-• Time slice is subject to change, i.e. you might be asked to change it to x instructions per time slice.
-• Order in which the processes are scheduled are subject to change.
-• The timings in which processes arrive are subject to change
-• The memory shown every clock cycle in a human readable format.
-• The ID of any process whenever it is swapped in or out of disk.
-• The format of the memory stored on Disk.
+- Queues should be printed after every scheduling event, i.e. when a process is chosen, blocked, or finished.
+- Which process is currently executing.
+- The instruction that is currently executing
+- Time slice is subject to change, i.e. you might be asked to change it to x instructions per time slice.
+- Order in which the processes are scheduled are subject to change.
+- The timings in which processes arrive are subject to change
+- The memory shown every clock cycle in a human readable format.
+- The ID of any process whenever it is swapped in or out of disk.
+- The format of the memory stored on Disk.
